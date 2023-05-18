@@ -1,0 +1,58 @@
+
+.titulo{
+    justify-content: center;
+}
+
+.card-portfolio{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    margin: 2em 2em;
+    padding: 2rem 2rem;
+    width: 30%;
+    height: 500px;
+    align-self: end;
+    justify-content: space-around;
+}
+
+.card-portfolio img{
+    width: 3rem;
+    margin-top: 20px;
+}
+
+.card-portfolio-container{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:768px) {
+
+.card-portfolio{
+        margin: 1rem 1rem;
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+.card-portfolio-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-portfolio{
+    width: 95%;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    justify-content: center;
+    height: 400px;
+}
+    
+}
+
+
+
+
+

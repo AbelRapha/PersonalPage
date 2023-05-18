@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './app.css'
+import Cabecalho from './componentes/Cabecalho';
+import Conteudo from './componentes/Conteudo';
+import {MantineProvider, ColorSchemeProvider} from '@mantine/core';
+import { Carrossel } from './componentes/Carrossel';
+import { Retrospecto } from './componentes/Retrospecto';
+import Portfolio from './componentes/Portfolio';
+import Formulario from './componentes/Formulario';
+import Rodape from './componentes/Rodape';
+import { Notifications } from '@mantine/notifications';
+import FloatButton from './componentes/FloatButton';
 
-function App() {
+
+function App(){
+  const [colorScheme, setColorScheme] = useState('dark');
+  const toggleColorScheme = (value) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+        <Notifications/>
+        <Cabecalho/>
+        <Conteudo/>
+        <Carrossel/>
+        <Retrospecto/>
+        <Portfolio/>
+        <Formulario/>
+        <FloatButton/>
+        <Rodape/>
+        </MantineProvider>
+    </ColorSchemeProvider>
+  )
 }
+
 
 export default App;

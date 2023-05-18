@@ -1,0 +1,16 @@
+.botoes{
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0rem;
+}
+
+@media screen and (max-width:480px) {
+
+.botoes{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 1rem;
+}
+
+    
+}

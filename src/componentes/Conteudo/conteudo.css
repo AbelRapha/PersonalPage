@@ -1,0 +1,40 @@
+.conteudo {
+    display: flex;
+    padding: 1rem 1rem;
+    background-color: "#D8D8D8";
+}
+
+
+.texto {
+    color: white;
+    justify-content: left;
+    font-size: 20px;
+    padding: 5rem 5rem;
+}
+
+.texto bold {
+    font-weight: bold;
+    color: aqua
+}
+
+.imagem {
+    justify-content: right;
+}
+
+.imagem img{
+    padding: 5rem 5rem;
+ }
+
+ @media screen and (max-width: 480px) {
+
+    .conteudo {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    .texto{
+        padding: 0;
+    }
+    
+ }

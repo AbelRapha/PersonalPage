@@ -1,0 +1,14 @@
+.carrossel-container img {
+    width: 10%;
+    height: 10%;
+}
+
+.card {
+    box-sizing: border-box;
+    border: 2px solid aqua;
+    border-radius: 10px;
+}
+
+.titulo{
+    text-align: center;
+}
