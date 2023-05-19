@@ -1,9 +1,10 @@
 .cabecalho {
     display: flex;
     flex-direction: row;
+    position: fixed;
     width: 100%;
     justify-content: center;
-    background-color: "#D8D8D8";
+    background-color: black;
     padding: 1rem 1rem;
     margin: 0;
     width: 100%;
